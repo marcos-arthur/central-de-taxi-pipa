@@ -1,95 +1,105 @@
-import Image from 'next/image'
+import { Container, Row, Col } from "react-bootstrap"
+import { ChevronDoubleDown } from "react-bootstrap-icons"
+import Image from "next/image"
+
 import styles from './page.module.css'
 
-export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>src/app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{' '}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+import logo from "./../../public/assets/logo.svg"
+import pipa_beach from "./../../public/assets/pipa_beach.png"
 
-      <div className={styles.center}>
+export default function teste(){
+    return(
+      // <>
+      //   <div style={{
+      //     zIndex: -1,
+      //     position: "fixed",
+      //     width: "100vw",
+      //     height: "100vh",
+      //   }}>
+      //     <Image
+      //       alt="beach"
+      //       src={pipa_beach}
+      //       placeholder="blur"
+      //       priority 
+      //       quality={75} /* 100 */
+      //       sizes="100vw"
+      //       layout="fill"
+      //       style={{
+      //           objectFit: 'cover',
+      //       }}
+      //     />
+      //   </div>
+      //   <Container className="mt-3">
+      //     <section className={styles.wellcomeSection}>
+      //       <Row className="justify-content-center">
+      //         <Col md="4">
+      //             <Image
+      //               src={logo}
+      //               alt="logo da Central taxi pipa"
+      //               quality={100}
+      //               className={styles.logo}
+      //             />
+      //         </Col>
+      //         <Col md={{span: 3, offset: 4}}>
+      //           <button className={styles.getInTouchButton}>Entre em contato</button>
+      //         </Col>
+      //       </Row>
+      //       <Row className="mt-4">
+      //         <Col md="12" className="d-flex text-center">
+      //           <h1 className={styles.headerText}>Realizamos transfers de aeroportos para diversas cidades do nordeste</h1>
+      //         </Col>
+      //       </Row>
+      //     </section>
+      //   </Container>
+      // </>
+      <section className={styles.wellcomeSection}>
         <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          alt="beach"
+          src={pipa_beach}
+          placeholder="blur"
+          priority 
+          quality={100}
+          sizes="100vw"
+          layout="fill"
+          style={{
+            objectFit: 'cover',
+          }}
+          className={styles.backgroundImage}
         />
-      </div>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
+        <Container className={"mt-5 d-flex flex-column justify-content-between flex-wrap " + styles.wellcomeContainer}>
+            <Row className={"justify-content-center align-items-end"}>
+              <Col md="4">
+                  <Image
+                  src={logo}
+                  alt="logo da Central taxi pipa"
+                  quality={100}
+                  className={styles.logo}
+                />
+            </Col>
+            <Col md={{span: 3, offset: 4}}>
+              <button className={styles.getInTouchButton}>Agendar viagem</button>
+            </Col>
+          </Row>
+          <Row className="mt-4">
+            <Col md="12" className="d-flex text-center">
+              <h1 className={styles.headerText}>Realizamos <span>transfers</span> da Praia de Pipa para <span>cidades</span> e <span>aeroportos</span> do <span>nordeste</span></h1>
+            </Col>
+          </Row>
+          <Row>
+            <a href="#scroll-down" className={styles.scrollBtn}> <ChevronDoubleDown size={30}/> Conheça nossos serviços </a> 
+          </Row>
+        </Container>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
+        {/* <Container className={"h-100 position-relative " + styles.headerText}>
+          <div className="d-flex h-100 align-items-center">
+            <div className="text-white">
+              <h1 className="text-center">Realizamos transfers de aeroportos para diversas cidades do nordeste</h1>
+            </div>
+          </div>
+        </Container>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore the Next.js 13 playground.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  )
+        <a href="#scroll-down" className={styles.scrollBtn}> <ChevronDoubleDown size={30}/> Conheça nossos serviços </a> */}
+      </section>
+    )
 }
