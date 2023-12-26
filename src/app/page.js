@@ -1,105 +1,135 @@
 import { Container, Row, Col } from "react-bootstrap"
-import { ChevronDoubleDown } from "react-bootstrap-icons"
+import { Airplane, ArrowRight, ChevronDoubleDown, TaxiFrontFill } from "react-bootstrap-icons"
 import Image from "next/image"
 
 import styles from './page.module.css'
 
 import logo from "./../../public/assets/logo.svg"
 import pipa_beach from "./../../public/assets/pipa_beach.png"
+import map from "./../../public/assets/svg/map.svg"
 
 export default function teste(){
     return(
-      // <>
-      //   <div style={{
-      //     zIndex: -1,
-      //     position: "fixed",
-      //     width: "100vw",
-      //     height: "100vh",
-      //   }}>
-      //     <Image
-      //       alt="beach"
-      //       src={pipa_beach}
-      //       placeholder="blur"
-      //       priority 
-      //       quality={75} /* 100 */
-      //       sizes="100vw"
-      //       layout="fill"
-      //       style={{
-      //           objectFit: 'cover',
-      //       }}
-      //     />
-      //   </div>
-      //   <Container className="mt-3">
-      //     <section className={styles.wellcomeSection}>
-      //       <Row className="justify-content-center">
-      //         <Col md="4">
-      //             <Image
-      //               src={logo}
-      //               alt="logo da Central taxi pipa"
-      //               quality={100}
-      //               className={styles.logo}
-      //             />
-      //         </Col>
-      //         <Col md={{span: 3, offset: 4}}>
-      //           <button className={styles.getInTouchButton}>Entre em contato</button>
-      //         </Col>
-      //       </Row>
-      //       <Row className="mt-4">
-      //         <Col md="12" className="d-flex text-center">
-      //           <h1 className={styles.headerText}>Realizamos transfers de aeroportos para diversas cidades do nordeste</h1>
-      //         </Col>
-      //       </Row>
-      //     </section>
-      //   </Container>
-      // </>
-      <section className={styles.wellcomeSection}>
-        <Image
-          alt="beach"
-          src={pipa_beach}
-          placeholder="blur"
-          priority 
-          quality={100}
-          sizes="100vw"
-          layout="fill"
-          style={{
-            objectFit: 'cover',
-          }}
-          className={styles.backgroundImage}
-        />
+        // <>
+        //   <div style={{
+        //     zIndex: -1,
+        //     position: "fixed",
+        //     width: "100vw",
+        //     height: "100vh",
+        //   }}>
+        //     <Image
+        //       alt="beach"
+        //       src={pipa_beach}
+        //       placeholder="blur"
+        //       priority 
+        //       quality={75} /* 100 */
+        //       sizes="100vw"
+        //       layout="fill"
+        //       style={{
+        //           objectFit: 'cover',
+        //       }}
+        //     />
+        //   </div>
+        //   <Container className="mt-3">
+        //     <section className={styles.wellcomeSection}>
+        //       <Row className="justify-content-center">
+        //         <Col md="4">
+        //             <Image
+        //               src={logo}
+        //               alt="logo da Central taxi pipa"
+        //               quality={100}
+        //               className={styles.logo}
+        //             />
+        //         </Col>
+        //         <Col md={{span: 3, offset: 4}}>
+        //           <button className={styles.getInTouchButton}>Entre em contato</button>
+        //         </Col>
+        //       </Row>
+        //       <Row className="mt-4">
+        //         <Col md="12" className="d-flex text-center">
+        //           <h1 className={styles.headerText}>Realizamos transfers de aeroportos para diversas cidades do nordeste</h1>
+        //         </Col>
+        //       </Row>
+        //     </section>
+        //   </Container>
+        // </>
+        <>
+          <section className={styles.wellcomeSection}>
+            <Image
+              alt="beach"
+              src={pipa_beach}
+              placeholder="blur"
+              priority 
+              quality={100}
+              sizes="100vw"
+              layout="fill"
+              style={{
+                objectFit: 'cover',
+              }}
+              className={styles.backgroundImage}
+            />
 
-        <Container className={"mt-5 d-flex flex-column justify-content-between flex-wrap " + styles.wellcomeContainer}>
-            <Row className={"justify-content-center align-items-end"}>
-              <Col md="4">
+            <Container className={"mt-5 d-flex flex-column justify-content-between flex-wrap " + styles.wellcomeContainer}>
+                <Row className={"justify-content-center align-items-end"}>
+                  <Col md="4">
+                      <Image
+                        src={logo}
+                        alt="logo da Central taxi pipa"
+                        quality={100}
+                        className={styles.logo}
+                      />
+                </Col>
+                <Col md={{span: 3, offset: 4}}>
+                  <button className={styles.getInTouchButton}>Agendar viagem</button>
+                </Col>
+              </Row>
+              <Row className="mt-4">
+                <Col md="12" className="d-flex text-center">
+                  <h1 className={styles.headerText}>Realizamos <span>transfers</span> da Praia de Pipa para <span>cidades</span> e <span>aeroportos</span> do <span>nordeste</span></h1>
+                </Col>
+              </Row>
+              <Row>
+                <a href="#scroll-down" className={styles.scrollBtn}> <ChevronDoubleDown size={30}/> Conheça nossos serviços </a> 
+              </Row>
+            </Container>
+
+          </section>
+
+          <section className={styles.servicesSection}>
+            <header className={styles.sectionHeader}>
+              <h2 className={styles.sectionHeaderText}>Nossos serviços</h2>
+            </header>
+            <Container>
+              <h2 className={styles.serviceTypeHeader}>Fazemos <span>transfer</span> de diversos aeroportos</h2>
+              <Row>
+                <Col sm={{span: 3, offset: 1}} className={"text-center"}>
+                  <Airplane size={60} color={"#00B0D5"} className={styles.planeIcon}/>
+                  <p className={styles.iconLabelText}>Aeroporto</p>
+                </Col>
+                <Col sm="2" className={"text-center"}>
+                  <ArrowRight size={60} color={"#00B0D5"}/>
+                </Col>
+                <Col sm="5" className={"text-center"}>
+                  <TaxiFrontFill size={60} color={"#00B0D5"}/>
+                  <p className={styles.iconLabelText}><span>Central de Taxi Pipa</span></p>
+                </Col>
+                <Col sm="2" className={"text-center"}>
+                  <ArrowRight size={60} color={"#00B0D5"} className={"h-100"}/>
+                </Col>
+                <Col sm="10" className={"text-center"}>
                   <Image
-                  src={logo}
-                  alt="logo da Central taxi pipa"
-                  quality={100}
-                  className={styles.logo}
-                />
-            </Col>
-            <Col md={{span: 3, offset: 4}}>
-              <button className={styles.getInTouchButton}>Agendar viagem</button>
-            </Col>
-          </Row>
-          <Row className="mt-4">
-            <Col md="12" className="d-flex text-center">
-              <h1 className={styles.headerText}>Realizamos <span>transfers</span> da Praia de Pipa para <span>cidades</span> e <span>aeroportos</span> do <span>nordeste</span></h1>
-            </Col>
-          </Row>
-          <Row>
-            <a href="#scroll-down" className={styles.scrollBtn}> <ChevronDoubleDown size={30}/> Conheça nossos serviços </a> 
-          </Row>
-        </Container>
+                    src={map}
+                    alt="logo da Central taxi pipa"
+                    quality={100}
+                    className={styles.mapImage}
+                  />
+                  <p className={styles.iconLabelText}>Sua cidade de destino</p>
+                </Col>
+              </Row>
+            </Container>
+            
+          </section>
 
-        {/* <Container className={"h-100 position-relative " + styles.headerText}>
-          <div className="d-flex h-100 align-items-center">
-            <div className="text-white">
-              <h1 className="text-center">Realizamos transfers de aeroportos para diversas cidades do nordeste</h1>
-            </div>
-          </div>
-        </Container>
-
-        <a href="#scroll-down" className={styles.scrollBtn}> <ChevronDoubleDown size={30}/> Conheça nossos serviços </a> */}
-      </section>
+        </>
     )
 }
