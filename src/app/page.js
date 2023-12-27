@@ -1,4 +1,5 @@
-import { Container, Row, Col } from "react-bootstrap"
+import { useState } from "react"
+import { Container, Row, Col, Carousel } from "react-bootstrap"
 import { Airplane, ArrowRight, ChevronDoubleDown, TaxiFrontFill } from "react-bootstrap-icons"
 import Image from "next/image"
 
@@ -9,6 +10,12 @@ import pipa_beach from "./../../public/assets/pipa_beach.png"
 import map from "./../../public/assets/svg/map.svg"
 
 export default function teste(){
+  const [index, setIndex] = useState(0);
+
+  const handleSelect = (selectedIndex, e) =>{
+    setIndex(selectedIndex);
+  }
+
     return(
         // <>
         //   <div style={{
@@ -99,33 +106,75 @@ export default function teste(){
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionHeaderText}>Nossos serviços</h2>
             </header>
-            <Container>
-              <h2 className={styles.serviceTypeHeader}>Fazemos <span>transfer</span> de diversos aeroportos</h2>
-              <Row>
-                <Col sm={{span: 3, offset: 1}} className={"text-center"}>
-                  <Airplane size={60} color={"#00B0D5"} className={styles.planeIcon}/>
-                  <p className={styles.iconLabelText}>Aeroporto</p>
-                </Col>
-                <Col sm="2" className={"text-center"}>
-                  <ArrowRight size={60} color={"#00B0D5"}/>
-                </Col>
-                <Col sm="5" className={"text-center"}>
-                  <TaxiFrontFill size={60} color={"#00B0D5"}/>
-                  <p className={styles.iconLabelText}><span>Central de Taxi Pipa</span></p>
-                </Col>
-                <Col sm="2" className={"text-center"}>
-                  <ArrowRight size={60} color={"#00B0D5"} className={"h-100"}/>
-                </Col>
-                <Col sm="10" className={"text-center"}>
-                  <Image
-                    src={map}
-                    alt="logo da Central taxi pipa"
-                    quality={100}
-                    className={styles.mapImage}
-                  />
-                  <p className={styles.iconLabelText}>Sua cidade de destino</p>
-                </Col>
-              </Row>
+            <Container className={"carousel slide"}>
+              <Carousel activeIndex={index} onSelect={handleSelect}>
+                <Carousel.Item >
+                <h2 className={styles.serviceTypeHeader}>Fazemos <span>transfer</span> de diversos aeroportos</h2>
+                  <Row>
+                    <Col xs={12} md={2} className={"text-center d-flex align-items-center justify-content-center"} >
+                      <div >
+                        <Airplane size={60} color={"#00B0D5"} className={styles.planeIcon}/>
+                        <p className={styles.iconLabelText}>Aeroporto</p>
+                      </div>
+                    </Col>
+                    <Col xs={12} md="2" className={"text-center"}>
+                      <ArrowRight size={60} color={"#00B0D5"} className={"h-100"}/>
+                    </Col>
+                    <Col xs={12} md="2" className={"text-center d-flex align-items-center justify-content-center"}>
+                      <div>
+                        <TaxiFrontFill size={60} color={"#00B0D5"}/>
+                        <p className={styles.iconLabelText}><span>Central de Taxi Pipa</span></p>
+                      </div>
+                    </Col>
+                    <Col xs={12} md="2" className={"text-center "}>
+                      <ArrowRight size={60} color={"#00B0D5"} className={"h-100"}/>
+                    </Col>
+                    <Col xs={12} md="4" className={"text-center"}>
+                      <Image
+                        src={map}
+                        alt="logo da Central taxi pipa"
+                        quality={100}
+                        className={styles.mapImage}
+                      />
+                      <p className={styles.iconLabelText}>Sua cidade de destino</p>
+                    </Col>
+                  </Row>
+                </Carousel.Item>
+
+                <Carousel.Item >
+                <h2 className={styles.serviceTypeHeader}>Fazemos <span>transfer</span> de diversos aeroportos</h2>
+                  <Row>
+                    <Col xs={12} md={2} className={"text-center d-flex align-items-center justify-content-center"} >
+                      <div >
+                        <Airplane size={60} color={"#00B0D5"} className={styles.planeIcon}/>
+                        <p className={styles.iconLabelText}>Aeroporto</p>
+                      </div>
+                    </Col>
+                    <Col xs={12} md="2" className={"text-center"}>
+                      <ArrowRight size={60} color={"#00B0D5"} className={"h-100"}/>
+                    </Col>
+                    <Col xs={12} md="2" className={"text-center d-flex align-items-center justify-content-center"}>
+                      <div>
+                        <TaxiFrontFill size={60} color={"#00B0D5"}/>
+                        <p className={styles.iconLabelText}><span>Central de Taxi Pipasdasdasda</span></p>
+                      </div>
+                    </Col>
+                    <Col xs={12} md="2" className={"text-center "}>
+                      <ArrowRight size={60} color={"#00B0D5"} className={"h-100"}/>
+                    </Col>
+                    <Col xs={12} md="4" className={"text-center"}>
+                      <Image
+                        src={map}
+                        alt="logo da Central taxi pipa"
+                        quality={100}
+                        className={styles.mapImage}
+                      />
+                      <p className={styles.iconLabelText}>Sua cidade de destino</p>
+                    </Col>
+                  </Row>
+                </Carousel.Item>
+              </Carousel>
+              
             </Container>
             
           </section>
