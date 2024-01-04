@@ -1,35 +1,66 @@
 
 .serviceTypeHeader{
-    margin: 22px 0 22px 0;
-    text-align: center;
+  margin: 22px 0 22px 0;
+  text-align: center;
+
+  font-size: 24px;
+  font-weight: 600;
+  color: #00B0D5;
+}
   
-    font-size: 24px;
-    font-weight: 600;
-    color: #00B0D5;
-  }
-  
-  .serviceTypeHeader span{
-    font-style: italic;
-    font-size: 24px;
-    font-weight: 700;
-  }
-  
-  .planeIcon{
-    rotate: 90deg;
-  }
-  
-  .iconLabelText{
-    margin-top: 5px;
-  
-    font-size: 18px;
-    color: #00B0D5;
-  }
-  
-  .iconLabelText span{
-    font-weight: 600;
-  }
-  
-  .mapImage{
-    width: 100%;
-    height: unset;
-  }
+.serviceTypeHeader span{
+  font-style: italic;
+  font-size: 24px;
+  font-weight: 700;
+}
+
+.planeIcon{
+  rotate: 90deg;
+}
+
+.iconLabelText{
+  margin-top: 5px;
+
+  font-size: 18px;
+  color: #00B0D5;
+}
+
+.iconLabelText span{
+  font-weight: 600;
+}
+
+.mapImage{
+  width: 100%;
+  height: unset;
+}
+
+.myCarousel{
+  margin-bottom: 20px;
+}
+
+.carousel_indicators > div:first-child{
+  width: 10vh;
+}
+
+.circle{
+  width: 25px;
+  height: 25px;
+  -webkit-border-radius: 25px;
+  -moz-border-radius: 25px;
+  border-radius: 25px;
+  border: solid;
+  border-color: #FEFEFB;
+  background: #00B0D5;
+
+  transition: background-color 1s ease;
+  transition: border-color 1s ease;
+}
+
+.circle:hover{
+  cursor: pointer;
+}
+
+.active{
+  border-color: #00B0D5;
+  background: #FEFEFB;
+}
