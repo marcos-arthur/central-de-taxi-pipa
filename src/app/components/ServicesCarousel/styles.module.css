@@ -36,6 +36,14 @@
 
 .myCarousel{
   margin-bottom: 20px;
+  padding-bottom: 10px;
+}
+
+.carousel_indicators{
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
 }
 
 .carousel_indicators > div:first-child{
@@ -63,4 +71,9 @@
 .active{
   border-color: #00B0D5;
   background: #FEFEFB;
+}
+
+.serviceWithBackgroundImage{
+  height: 100vh;
+  
 }

@@ -13,49 +13,6 @@ export default function teste(){
   
 
     return(
-        // <>
-        //   <div style={{
-        //     zIndex: -1,
-        //     position: "fixed",
-        //     width: "100vw",
-        //     height: "100vh",
-        //   }}>
-        //     <Image
-        //       alt="beach"
-        //       src={pipa_beach}
-        //       placeholder="blur"
-        //       priority 
-        //       quality={75} /* 100 */
-        //       sizes="100vw"
-        //       layout="fill"
-        //       style={{
-        //           objectFit: 'cover',
-        //       }}
-        //     />
-        //   </div>
-        //   <Container className="mt-3">
-        //     <section className={styles.wellcomeSection}>
-        //       <Row className="justify-content-center">
-        //         <Col md="4">
-        //             <Image
-        //               src={logo}
-        //               alt="logo da Central taxi pipa"
-        //               quality={100}
-        //               className={styles.logo}
-        //             />
-        //         </Col>
-        //         <Col md={{span: 3, offset: 4}}>
-        //           <button className={styles.getInTouchButton}>Entre em contato</button>
-        //         </Col>
-        //       </Row>
-        //       <Row className="mt-4">
-        //         <Col md="12" className="d-flex text-center">
-        //           <h1 className={styles.headerText}>Realizamos transfers de aeroportos para diversas cidades do nordeste</h1>
-        //         </Col>
-        //       </Row>
-        //     </section>
-        //   </Container>
-        // </>
         <>
           <section className={styles.wellcomeSection}>
             <Image
