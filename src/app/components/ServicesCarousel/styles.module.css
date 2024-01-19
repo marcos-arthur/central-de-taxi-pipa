@@ -35,14 +35,15 @@
 }
 
 .myCarousel{
+  height: 500px;
+
   margin-bottom: 20px;
   padding-bottom: 10px;
 }
 
 .carousel_indicators{
   position: absolute;
-  bottom: 0;
-  left: 0;
+  bottom: 20px;
   width: 100%;
 }
 
@@ -57,9 +58,8 @@
   -moz-border-radius: 25px;
   border-radius: 25px;
   border: solid;
-  border-color: #FEFEFB;
-  background: #00B0D5;
-
+  border-color: #00B0D5;
+  background: #FEFEFB;
   transition: background-color 1s ease;
   transition: border-color 1s ease;
 }
@@ -69,11 +69,21 @@
 }
 
 .active{
-  border-color: #00B0D5;
-  background: #FEFEFB;
+  background: #00B0D5;
 }
 
 .serviceWithBackgroundImage{
-  height: 100vh;
-  
+  height: 500px;
+  color: #FEFEFB;
+}
+
+.serviceWithBackgroundImage p{
+  font-size: 20px;
+}
+
+.imageFilter{
+  filter: blur(0.2rem) brightness(0.3);
+  transform: scale(1.1); 
+
+  z-index: -1;
 }

@@ -59,8 +59,8 @@ export default function teste(){
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionHeaderText}>Nossos serviços</h2>
             </header>
-            <Container className="carousel slide mb-5" fluid>
-              <ServicesCarousel/>  
+            <Container className="carousel slide mb-5 p-0" fluid>
+              <ServicesCarousel/>
             </Container>
             
           </section>

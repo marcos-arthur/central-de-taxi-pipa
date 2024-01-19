@@ -44,7 +44,7 @@ const SERVICES_LIST = [
         </Row>
     </>,
     <>
-        <Container className={`position-absolute ${styles.serviceWithBackgroundImage}`}>
+        <Container className={`${styles.serviceWithBackgroundImage} d-flex flex-column`}>
             <Image
               alt="chapadão"
               src={chapadao}
@@ -56,8 +56,12 @@ const SERVICES_LIST = [
               style={{
                 objectFit: 'cover',
               }}
-              className={styles.backgroundImage}
+              className={styles.imageFilter}
             />
+
+            <Row><Col xs={{span: '8', offset: '2'}} className="text-center"><h1>Levamos você para todos os cantos de Pipa</h1></Col></Row>
+            <Row ><Col xs={{span: '8', offset: '2'}} className="text-center"><p>Viagens para o centro de Pipa, a Praia do Amor, o Chapadão e arredores.</p></Col></Row>
+            <Row className="flex-fill"></Row>
         </Container>
     </>,
 ]
