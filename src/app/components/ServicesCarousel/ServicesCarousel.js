@@ -13,7 +13,7 @@ import chapadao from "./../../../../public/assets/chapadao.png"
 const SERVICES_LIST = [
     <>
         <h2 className={styles.serviceTypeHeader}>Fazemos <span>transfer</span> de diversos aeroportos</h2>
-        <Row>
+        <Row className="mb-5">
             <Col xs={12} md={{span: 2, offset: 1}} className={"text-center d-flex align-items-center justify-content-center"} >
                 <div >
                     <Airplane size={60} color={"#00B0D5"} className={styles.planeIcon}/>
@@ -44,7 +44,7 @@ const SERVICES_LIST = [
         </Row>
     </>,
     <>
-        <Container className={`${styles.serviceWithBackgroundImage} d-flex flex-column`}>
+        <Container className={`${styles.serviceWithBackgroundImage}`}>
             <Image
               alt="chapadão"
               src={chapadao}
@@ -59,8 +59,8 @@ const SERVICES_LIST = [
               className={styles.imageFilter}
             />
 
-            <Row><Col xs={{span: '8', offset: '2'}} className="text-center"><h1>Levamos você para todos os cantos de Pipa</h1></Col></Row>
-            <Row ><Col xs={{span: '8', offset: '2'}} className="text-center"><p>Viagens para o centro de Pipa, a Praia do Amor, o Chapadão e arredores.</p></Col></Row>
+            <Row><Col xs={{span: '8', offset: '2'}} className={`${styles.serviceWithBackgroundImageHeader} text-center`}><h1>Levamos você para todos os cantos de Pipa</h1></Col></Row>
+            <Row ><Col xs={{span: '8', offset: '2'}} className="text-center"><p>Viagens para o <span>centro de Pipa</span>, a <span>Praia do Amor</span>, o <span>Chapadão</span> e arredores.</p></Col></Row>
             <Row className="flex-fill"></Row>
         </Container>
     </>,

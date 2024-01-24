@@ -1,6 +1,6 @@
 
 .serviceTypeHeader{
-  margin: 22px 0 22px 0;
+  margin: 0 0 22px 0;
   text-align: center;
 
   font-size: 24px;
@@ -35,10 +35,13 @@
 }
 
 .myCarousel{
-  height: 500px;
+  height: fit-content;
 
   margin-bottom: 20px;
-  padding-bottom: 10px;
+}
+
+.myCarousel > div{
+  padding-top: 22px;
 }
 
 .carousel_indicators{
@@ -73,13 +76,38 @@
 }
 
 .serviceWithBackgroundImage{
+  display: grid;
   height: 500px;
   color: #FEFEFB;
 }
 
 .serviceWithBackgroundImage p{
-  font-size: 20px;
+  font-size: 30px;
+  /* font-weight: 700; */
 }
+
+.serviceWithBackgroundImage span{
+  font-style: italic;
+  font-size: 27px;
+  font-weight: 700;
+}
+
+@media (max-width: 575px) {
+  .serviceWithBackgroundImage h1{
+    font-size: 1.5rem;
+  }
+
+  .serviceWithBackgroundImage p{
+    font-size: 20px;
+  }
+
+  .serviceWithBackgroundImage span{
+    font-style: italic;
+    font-size: 20px;
+    font-weight: 600;
+  }
+}
+
 
 .imageFilter{
   filter: blur(0.2rem) brightness(0.3);
