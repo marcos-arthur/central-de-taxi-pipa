@@ -112,5 +112,6 @@
 /* Services Section */
 
 .servicesSection{
-  height: 384px;
+  display: block;
+  height: 100%;
 }
