@@ -6,6 +6,7 @@ import styles from './page.module.css'
 
 import logo from "./../../public/assets/logo.svg"
 import pipa_beach from "./../../public/assets/pipa_beach.png"
+import carro from "./../../public/assets/carro.png"
 
 import ServicesCarousel from "./components/ServicesCarousel/ServicesCarousel"
 
@@ -69,8 +70,121 @@ export default function teste(){
             <header className={styles.sectionHeader}>
               <h2 className={styles.sectionHeaderText}>Nossos veículos</h2>
             </header>
-            <Container fluid>
+            <Container className={styles.vehiclesContainer}>
+              <Row>
+                <Col xs={12} sm={6} md={4} xl={3}>
+                  <Container fluid className={styles.vehicleCard}>
+                    <Row>
+                      <Image
+                        alt="carro"
+                        src={carro}
+                        priority 
+                        quality={100}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                        className={styles.vehicleImage}
+                      />
+                    </Row>
+                    <Row className={styles.vehicleInfo}>
+                      <h5><strong>Nome do Carro</strong></h5>
+                      <p>Utilizado para viagens <em>locais</em> e para <em>transfers</em></p>
+                      <div>asdasd Passageiros</div>
+                    </Row>
+                  </Container>
+                </Col>
+                <Col xs={12} sm={6} md={4} xl={3}>
+                  <Container fluid className={styles.vehicleCard}>
+                    <Row>
+                      <Image
+                        alt="carro"
+                        src={carro}
+                        priority 
+                        quality={100}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                        className={styles.vehicleImage}
+                      />
+                    </Row>
+                    <Row className={styles.vehicleInfo}>
+                      <h5><strong>Nome do Carro</strong></h5>
+                      <p>Utilizado para viagens <em>locais</em> e para <em>transfers</em></p>
+                      <div>asdasd Passageiros</div>
+                    </Row>
+                  </Container>
+                </Col>
+                <Col xs={12} sm={6} md={4} xl={3}>
+                  <Container fluid className={styles.vehicleCard}>
+                    <Row>
+                      <Image
+                        alt="carro"
+                        src={carro}
+                        priority 
+                        quality={100}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                        className={styles.vehicleImage}
+                      />
+                    </Row>
+                    <Row className={styles.vehicleInfo}>
+                      <h5><strong>Nome do Carro</strong></h5>
+                      <p>Utilizado para viagens <em>locais</em> e para <em>transfers</em></p>
+                      <div>asdasd Passageiros</div>
+                    </Row>
+                  </Container>
+                </Col>
+                <Col xs={12} sm={6} md={4} xl={3}>
+                  <Container fluid className={styles.vehicleCard}>
+                    <Row>
+                      <Image
+                        alt="carro"
+                        src={carro}
+                        priority 
+                        quality={100}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                        className={styles.vehicleImage}
+                      />
+                    </Row>
+                    <Row className={styles.vehicleInfo}>
+                      <h5><strong>Nome do Carro</strong></h5>
+                      <p>Utilizado para viagens <em>locais</em> e para <em>transfers</em></p>
+                      <div>asdasd Passageiros</div>
+                    </Row>
+                  </Container>
+                </Col>
+                <Col xs={12} sm={6} md={4} xl={3}>
+                  <Container fluid className={styles.vehicleCard}>
+                    <Row>
+                      <Image
+                        alt="carro"
+                        src={carro}
+                        priority 
+                        quality={100}
+                        sizes="100vw"
+                        style={{
+                          objectFit: 'cover',
+                        }}
+                        className={styles.vehicleImage}
+                      />
+                    </Row>
+                    <Row className={styles.vehicleInfo}>
+                      <h5><strong>Nome do Carro</strong></h5>
+                      <p>Utilizado para viagens <em>locais</em> e para <em>transfers</em></p>
+                      <div>asdasd Passageiros</div>
+                    </Row>
+                  </Container>
+                </Col>
+              </Row>
             </Container>
+
             
           </section>
 
